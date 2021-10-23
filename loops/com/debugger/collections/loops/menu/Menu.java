@@ -1,8 +1,7 @@
 package com.debugger.collections.loops.menu;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
+import java.util.*;
+
 
 public class Menu {
 	private String item;
@@ -28,7 +27,6 @@ public class Menu {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
 
 	@Override
 	public String toString() {
@@ -44,9 +42,8 @@ public class Menu {
 		Collection<Menu> items = new ArrayList<>(Arrays.asList(burger, soda, coffee, muffin));
 		for (Menu menu : items) {
 			System.out.println(menu);
+
 		}
-//		items.stream().forEach(i -> System.out.println(i.getItem()));
-//		items.stream().forEach(i -> System.out.println(i.getPrice()));
 	}
 
 }
