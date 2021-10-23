@@ -6,6 +6,9 @@ import java.util.Collection;
 import java.util.stream.Collectors;
 
 public class Main {
+	/*
+	 * Calculate how much estimated revenue can we make from pet friendly rooms
+	 */
 	public static void main(String[] args) {
 
 		Room flower = new Room("Flower", "VIP Room", 1, 4000.0);
@@ -16,6 +19,9 @@ public class Main {
 		Collection<Room> rooms = new ArrayList<>(Arrays.asList(flower, greenwood, redRose, amurTiger));
 		amurTiger.setPetFriendly(true);
 		redRose.setPetFriendly(true);
+		
+//		rooms.stream().filter(r -> rooms.isPetFriendly())
+//		.forEach(r -> System.out.println(rooms.getName()));
 		
 		Collection<Room> petFriendlyRooms = rooms.stream()
 			.filter(Room::isPetFriendly)
